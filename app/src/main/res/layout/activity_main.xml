@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:context=".MainActivity">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="387dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="24dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="387dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="659dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="24dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 로고 -->
+    <ImageView
+        android:id="@+id/ic_gd"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo_gd"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--my page-->
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:clickable="true"
+        android:onClick="onClick_mypage"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mypage" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="24dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="24dp" />
+
+        <!--tem icon-->
+        <ImageView
+            android:id="@+id/ic_tem"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:onClick="onClick_tem"
+            android:src="@drawable/temperature"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--tem real time-->
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Fahrenheit °Ｆ"
+            app:layout_constraintStart_toEndOf="@+id/ic_tem"
+            app:layout_constraintTop_toTopOf="@+id/ic_tem" />
+
+        <!--tem smile-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="37.5dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/editText6"
+            app:layout_constraintTop_toTopOf="@+id/editText6"
+            app:srcCompat="@drawable/happy" />
+
+        <!--bpm icon-->
+        <ImageView
+            android:id="@+id/ic_bpm"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:onClick="onClick_bpm"
+            android:src="@drawable/heart"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/ic_tem" />
+
+        <!--bpm real time-->
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Beats Per Minute"
+            app:layout_constraintStart_toEndOf="@+id/ic_bpm"
+            app:layout_constraintTop_toTopOf="@+id/ic_bpm" />
+
+        <!--bpm smile-->
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="50dp"
+            android:layout_height="37.5dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/editText7"
+            app:layout_constraintTop_toTopOf="@+id/editText7"
+            app:srcCompat="@drawable/happy" />
+
+        <!--air icon-->
+        <ImageView
+            android:id="@+id/ic_air"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:onClick="onClick_air"
+            android:src="@drawable/clouds"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/ic_bpm" />
+
+        <!--air real time-->
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="AirCondition"
+            app:layout_constraintStart_toEndOf="@+id/ic_air"
+            app:layout_constraintTop_toTopOf="@+id/ic_air" />
+
+        <!--air sad-->
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="50dp"
+            android:layout_height="37.5dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@+id/editText8"
+            app:layout_constraintTop_toTopOf="@+id/editText8"
+            app:srcCompat="@drawable/sad" />
+
+        <!--location icon-->
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="24dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <!--sing out icon-->
+    <ImageView
+        android:id="@+id/ic_signout"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_signout"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:onClick="onClick_signout"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="247dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_gd">
+
+        <!--google map-->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity" >
+
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="com.google.android.gms.maps.MapFragment" />
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

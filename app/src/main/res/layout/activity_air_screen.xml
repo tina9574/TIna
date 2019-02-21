@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="387dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="24dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="387dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="659dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="24dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 로고 -->
+    <ImageView
+        android:id="@+id/ic_gd"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo_gd"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--air condition text-->
+    <TextView
+        android:id="@+id/air_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:text="Air Condition"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--SO2_line-->
+    <View
+        android:id="@+id/SO2_line"
+        android:layout_width="6dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:background="#9DFD3277"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/air_condition" />
+
+    <!--SO2 ppm text-->
+    <TextView
+        android:id="@+id/SO2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:text="SO2 ppm"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/air_condition" />
+
+    <!--SO2 ppm real time-->
+    <EditText
+        android:id="@+id/real_SO2"
+        android:layout_width="135dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="18dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="real time"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/SO2" />
+
+    <!--O3_line-->
+    <View
+        android:id="@+id/O3_line"
+        android:layout_width="6dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:background="#9d3ce439"
+        app:layout_constraintEnd_toStartOf="@id/O3"
+        app:layout_constraintTop_toBottomOf="@+id/air_condition" />
+
+    <!--O3 ppm text-->
+    <TextView
+        android:id="@+id/O3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="115dp"
+        android:text="O3 ppm"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/air_condition" />
+
+    <!--O3 ppm real time-->
+    <EditText
+        android:id="@+id/real_O3"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="208dp"
+        android:layout_marginEnd="38dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="real time"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/O3" />
+
+    <!--CO_line-->
+    <View
+        android:id="@+id/CO_line"
+        android:layout_width="6dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:background="#9d395ee4"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/real_SO2" />
+
+    <!--CO ppm text-->
+    <TextView
+        android:id="@+id/CO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="65dp"
+        android:text="CO ppm"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/real_SO2" />
+
+    <!--CO ppm real time-->
+    <EditText
+        android:id="@+id/real_CO"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="real time"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/CO" />
+
+    <!--NO2_line-->
+    <View
+        android:id="@+id/NO2_line"
+        android:layout_width="6dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="#9de49a39"
+        app:layout_constraintEnd_toStartOf="@id/NO2"
+        app:layout_constraintTop_toBottomOf="@+id/real_O3" />
+
+    <!--NO2 ppm text-->
+    <TextView
+        android:id="@+id/NO2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="107dp"
+        android:text="NO2 ppm"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/real_O3" />
+
+    <!--NO2 ppm real time-->
+    <EditText
+        android:id="@+id/real_NO2"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="208dp"
+        android:layout_marginEnd="38dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="real time"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/NO2" />
+
+    <!--fine dust line-->
+    <View
+        android:id="@+id/fine_line"
+        android:layout_width="6dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/real_CO" />
+
+    <!--fine dust text-->
+    <TextView
+        android:id="@+id/fine_dust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:text="Fine Dust"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/real_CO" />
+
+    <!--fine dust real time-->
+    <EditText
+        android:id="@+id/real_fine"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="real time"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/fine_dust" />
+
+    <!--sing out icon-->
+    <ImageView
+        android:id="@+id/ic_signout"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_signout"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:onClick="onClick_signout"/>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/bg_screen"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context="com.example.mbreath,multipleaxislinechart.AirScreenActivity">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="History"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toEndOf="@+id/fine_line" />
+
+
+</android.support.constraint.ConstraintLayout>

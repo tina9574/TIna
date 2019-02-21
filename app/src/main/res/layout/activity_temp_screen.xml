@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="387dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="24dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="387dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="659dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="24dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- 로고 -->
+    <ImageView
+        android:id="@+id/ic_gd"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo_gd"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--tem icon-->
+    <ImageView
+        android:id="@+id/ic_tem"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/temperature"
+        app:layout_constraintEnd_toStartOf="@+id/temperature"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Temperature 글씨 -->
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="90dp"
+        android:text="Temperature"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--F_line-->
+    <View
+        android:id="@+id/F_line"
+        android:layout_width="6dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="25dp"
+        android:background="#9DFD3277"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/temperature" />
+
+    <!--real time 화씨온도-->
+    <TextView
+        android:id="@+id/fahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="60dp"
+        android:text="Fahrenheit °Ｆ"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/temperature" />
+
+    <!--real time 화씨온도-->
+    <EditText
+        android:id="@+id/real_F"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="fahrenheit"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/fahrenheit" />
+
+    <!--C_line-->
+    <View
+        android:id="@+id/C_line"
+        android:layout_width="6dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="#9d395ee4"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/real_F" />
+
+    <!--섭씨온도 text-->
+    <TextView
+        android:id="@+id/celsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:text="Celsius °Ｃ"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/real_F" />
+
+    <!--real time 섭씨온도-->
+    <EditText
+        android:id="@+id/real_C"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="celsius"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/celsius" />
+
+    <!--sing out icon-->
+    <ImageView
+        android:id="@+id/ic_signout"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_signout"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:onClick="onClick_signout"/>
+
+    <!--History layout-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="380dp"
+        android:background="@drawable/bg_screen"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context="com.example.mbreath,multipleaxislinechart.TempScreenActivity">
+
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/linechart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="History"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left" />
+
+</android.support.constraint.ConstraintLayout>

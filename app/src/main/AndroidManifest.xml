@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.master.ace_login">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_gd"
+        android:label="GOOD DOCTOR"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        >
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBsnqGVs_jcvszp6hMvYOBAUoi5AYfdgE4"/>
+
+        <activity android:name=".SignInActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ForgottenActivity" />
+        <activity android:name=".TempScreenActivity" />
+        <activity android:name=".AirScreenActivity" />
+        <activity android:name=".BpmScreenActivity" />
+        <activity android:name=".LocationScreenActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MembershipWithdrawalActivity" />
+        <activity android:name=".InfoChangeActivity" />
+        <activity android:name=".MyPageActivity"></activity>
+
+        <activity
+            android:name=".DeviceListActivity"
+            android:label="@string/select_device"
+            android:theme="@android:style/Theme.Holo.Dialog"/>
+
+    </application>
+
+</manifest>

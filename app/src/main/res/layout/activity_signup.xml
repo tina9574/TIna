@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/user_email"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/sign_up_bg" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="8dp"
+            android:text="E-mail"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/user_email"
+            app:layout_constraintEnd_toEndOf="@+id/btn_check"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left" />
+
+        <TextView
+            android:id="@+id/email2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="E-mail Authenticode"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/Email_authenticode"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/user_email" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="24dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="24dp" />
+
+        <!-- 로고 -->
+        <ImageView
+            android:id="@+id/ic_gd"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo_gd"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--sign up text background-->
+        <ImageView
+            android:id="@+id/sign_up_bg"
+            android:layout_width="140dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="38dp"
+            android:src="@drawable/brush"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Sign up text-->
+        <TextView
+            android:id="@+id/Sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Sign Up"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Email text-->
+
+        <EditText
+            android:id="@+id/Email_authenticode"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:hint="Authenticode"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/email2" />
+
+
+        <!--email check button-->
+        <Button
+            android:id="@+id/btn_check"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="check"
+            app:layout_constraintBottom_toTopOf="@+id/user_email"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right" />
+
+        <!--Password text-->
+        <TextView
+            android:id="@+id/signin_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Password"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/Email_authenticode" />
+
+        <!--Password blank-->
+        <EditText
+            android:id="@+id/user_password"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/signin_password" />
+
+        <!--reconfirm password text-->
+        <TextView
+            android:id="@+id/reconfirm_pw_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Reconfirm Password"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/user_password" />
+
+
+        <!--Reconfirm Password blank-->
+        <EditText
+            android:id="@+id/reconfirm_pw"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:hint="Reconfirm Password"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/reconfirm_pw_text" />
+
+        <!--Name text-->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Name"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/reconfirm_pw" />
+
+        <!--Name blank-->
+        <EditText
+            android:id="@+id/signin_name"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+        <!--Gender text-->
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Gender"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/signin_name" />
+
+        <!--gender button group-->
+        <RadioGroup
+            android:id="@+id/genderGroup"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:checkedButton="@+id/btn_male"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@id/gender">
+
+            <!--male button-->
+            <RadioButton
+                android:id="@+id/btn_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Male"
+                android:textSize="16sp" />
+
+            <!--female button-->
+            <RadioButton
+                android:id="@+id/btn_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:text="Female"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <!--birth text-->
+        <TextView
+            android:id="@+id/birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            android:text="Birth"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/genderGroup" />
+
+        <!--spinner month-->
+        <Spinner
+            android:id="@+id/month"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="MM"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/birth" />
+
+        <!--spinner day-->
+        <Spinner
+            android:id="@+id/day"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="DD"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="@id/month"
+            app:layout_constraintTop_toBottomOf="@+id/birth" />
+
+        <!--spinner year-->
+        <Spinner
+            android:id="@+id/year"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="YYYY"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.801"
+            app:layout_constraintStart_toStartOf="@id/day"
+            app:layout_constraintTop_toBottomOf="@+id/birth" />
+
+        <!--Phone number text-->
+        <TextView
+            android:id="@+id/tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Phone Number"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/month" />
+
+        <!--Phone number blank-->
+        <EditText
+            android:id="@+id/signup_tel"
+            android:layout_width="363dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="12dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toBottomOf="@+id/tel" />
+
+
+        <!--SIgn up now button-->
+        <Button
+            android:id="@+id/Complete"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_bg"
+            android:text="Sign Up Now"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline_right"
+            app:layout_constraintTop_toBottomOf="@+id/signup_tel" />
+
+        <Button
+            android:id="@+id/btn_authenticode"
+            android:layout_width="134dp"
+            android:layout_height="40dp"
+            android:text="Authenticode Check"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/Email_authenticode"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>

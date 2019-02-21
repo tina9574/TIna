@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MembershipWithdrawalActivity"
+    android:background="@drawable/bg_login">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <!-- 로고 -->
+    <ImageView
+        android:id="@+id/ic_gd"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo_gd"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--withdrawal text background-->
+    <ImageView
+        android:id="@+id/withdrwal_bg"
+        android:layout_width="300dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/brush_long"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Membership Withdrawal 로고붙이기-->
+    <TextView
+        android:id="@+id/membership_withdrawal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="ID Cancellation"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--비밀번호를 적어주세요-->
+    <TextView
+        android:id="@+id/pw_req"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:text="Write Your Password"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/membership_withdrawal" />
+
+    <!--password blank-->
+    <EditText
+        android:id="@+id/mem_password"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/et_bg"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="14dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/pw_req" />
+
+
+    <!--회원탈퇴 경고-->
+    <TextView
+        android:id="@+id/alert"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="50dp"
+        android:text=" This is a ID Cancellation page. Keep in mind that when you complete the page, all of your data up to this point will be deleted."
+        android:textAlignment="viewStart"
+        android:textColor="@color/red"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/mem_password" />
+
+
+    <!--숫자 1-->
+    <TextView
+        android:id="@+id/num_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="casual"
+        android:text="1."
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/alert" />
+
+    <!--회원탈퇴 이유 수집요청-->
+    <TextView
+        android:id="@+id/reason_req"
+        android:layout_width="310dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="casual"
+        android:text="Please, Choose one reason why you are leaving membership. It will be a valuable asset to GOOD DOCTOR."
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/num_1"
+        app:layout_constraintTop_toBottomOf="@+id/alert" />
+
+    <!--회원탈퇴 이유 작성-->
+    <Spinner
+        android:id="@+id/withdrawal_reason"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:padding="20dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/reason_req" />
+
+    <!--숫자 2-->
+    <TextView
+        android:id="@+id/num_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:text="2."
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/withdrawal_reason" />
+
+    <!--마지막 회원탈퇴 확인 질문-->
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:text="Do you really want to leave your membership?"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/num_2"
+        app:layout_constraintTop_toBottomOf="@+id/withdrawal_reason" />
+
+    <!--회원탈퇴 질문에 대한 대답-->
+    <CheckBox
+        android:id="@+id/ans_withdrawal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="Yes, I do."
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <!--cancel button-->
+
+    <!--withdrawal button-->
+    <Button
+        android:id="@+id/btn_withdrawal"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/btn_bg"
+        android:text="Goodbye"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/ans_withdrawal" />
+
+    <!--sing out icon-->
+    <ImageView
+        android:id="@+id/ic_signout"
+        android:layout_width="28dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_signout"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        android:onClick="onClick_signout"/>
+
+</android.support.constraint.ConstraintLayout>
